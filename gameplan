@@ -1,0 +1,64 @@
+## Register
+
+## Requests
+
+- `GET /countries`
+  [
+  {
+  countryCode: string
+  enabled: boolean
+  }
+  ]
+
+- `POST /v1/customers`
+  {
+  givenNames: string
+  lastName: string
+  email: string
+  countryCode: string // 'BG', 'UK', 'GB'
+  password: string
+  }
+
+## Validation
+
+givenNames - no numbers, no special characters
+lastName - no numbers, no special characters
+email - <нещо>@<нещо>.<нещо>
+countryCode - is valid -> is enabled, is 2 characters
+password - 5 min characters
+
+## Response
+
+Success:
+Headers: {
+Location: '/' <-- For later
+Set-Cookie: 'string'
+}
+
+{
+email: string
+}
+
+Error:
+// Given Names
+400 - { type: 'InvalidGivenNames' }
+
+// Last Name
+400 - { type: 'InvalidLastName' }
+// Email
+400 - { type: 'InvalidEmail' }
+409 - { type: 'EmailAlreadyInUse' }
+
+// Country code
+400 - { type: 'MalformedCountry' }
+400 - { type: 'UnknownCountry' }
+403 - { type: 'ForbiddenCountry' }
+
+// Password
+400 - { type: 'PasswordNotSecureEnough' }
+
+- `POST /login`
+  {
+  email: string
+  password: string
+  }
