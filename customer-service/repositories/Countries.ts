@@ -3,786 +3,786 @@ import { CountryT } from "../models/Country";
 export const Countries: CountryT[] = [
   {
     code: "AF",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AL",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "DZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AD",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AU",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BS",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BH",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BD",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BB",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BY",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BJ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BW",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BG",
-    isSupported: true,
+    support: 'full',
   },
   {
     code: "BF",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "BI",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KH",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CV",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CF",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TD",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CL",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CD",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CI",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "HR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CU",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CY",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "DK",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "DJ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "DM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "DO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "EC",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "EG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SV",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GQ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ER",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "EE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ET",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "FJ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "FI",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "FR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "DE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GH",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GD",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GW",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GY",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "HT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "HN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "HU",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "IS",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "IN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ID",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "IR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "IQ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "IE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "IL",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "IT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "JM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "JP",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "JO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KI",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KP",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KW",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LV",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LB",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LS",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LY",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LI",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LU",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MK",
-    isSupported: false,
+    support: 'upcoming',
   },
   {
     code: "MG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MW",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MY",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MV",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ML",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MH",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MU",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MX",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "FM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MD",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MC",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ME",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "MM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NP",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NL",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NI",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "NO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "OM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PK",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PW",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PY",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PH",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PL",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "PT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "QA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "RO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "RU",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "RW",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "KN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LC",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "VC",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "WS",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ST",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "RS",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SC",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SL",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SK",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SI",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SB",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ZA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SS",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ES",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "LK",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SD",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "CH",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "SY",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TW",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TJ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TH",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TL",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TO",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TT",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TR",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "TV",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "UG",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "UA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "AE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "GB",
-    isSupported: true,
+    support: 'full',
   },
   {
     code: "US",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "UY",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "UZ",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "VU",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "VA",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "VE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "VN",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "YE",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ZM",
-    isSupported: false,
+    support: 'none',
   },
   {
     code: "ZW",
-    isSupported: false,
+    support: 'none',
   },
 ];

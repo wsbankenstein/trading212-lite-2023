@@ -1,4 +1,4 @@
 export type CountryT = {
   code: string;
-  isSupported: boolean;
+  support: 'full' | 'partial' | 'upcoming' | 'none';
 };

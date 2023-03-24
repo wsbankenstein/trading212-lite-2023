@@ -2,7 +2,7 @@ type CustomerT = {
   id: string;
 
   email: string;
-  password: string;
+  hashedPassword: string;
 
   givenNames: string;
   lastName: string;
