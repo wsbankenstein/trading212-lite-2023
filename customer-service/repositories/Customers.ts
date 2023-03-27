@@ -5,6 +5,13 @@ class CustomersFileRepository implements CustomersRepository {
 
   async init() {
     try {
+      // Create the file if it doesn't exist
+      if (!fs.existsSync("./fake-db/customers-db.json")) {
+        fs.mkdirSync("./fake-db", { recursive: true });
+
+        fs.writeFileSync("./fake-db/customers-db.json", "[]");
+      }
+
       const rawCustomers = fs.readFileSync(
         "./fake-db/customers-db.json",
         "utf8"

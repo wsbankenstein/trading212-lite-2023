@@ -8,7 +8,7 @@ import { isValidishEmail } from "./validations/email";
 import { containsOnlyLatinCharacters } from "./validations/names";
 
 const app: Express = express();
-const port = 8081;
+const port = 4242;
 
 CustomersFileRepository.init();
 
