@@ -1,29 +1,71 @@
-class Customers {
+import fs from "fs";
+
+class CustomersFileRepository implements CustomersRepository {
   private customers: CustomerT[] = [];
 
-  init() {}
+  async init() {
+    try {
+      // Create the file if it doesn't exist
+      if (!fs.existsSync("./fake-db/customers-db.json")) {
+        fs.mkdirSync("./fake-db", { recursive: true });
 
-  getAll(): CustomerT[] {
-    return this.customers;
+        fs.writeFileSync("./fake-db/customers-db.json", "[]");
+      }
+
+      const rawCustomers = fs.readFileSync(
+        "./fake-db/customers-db.json",
+        "utf8"
+      );
+      this.customers = JSON.parse(rawCustomers);
+    } catch (err) {
+      this.customers = [];
+    }
   }
 
-  getByEmail(email: string): CustomerT | undefined {
-    return this.customers.find((customer) => customer.email === email);
+  fetchAll(): Promise<CustomerT[]> {
+    return Promise.resolve(this.customers);
   }
 
-  getById(id: string): CustomerT | undefined {
-    return this.customers.find((customer) => customer.id === id);
+  findByEmail(email: string): Promise<CustomerT | undefined> {
+    return Promise.resolve(
+      this.customers.find((customer) => customer.email === email)
+    );
   }
 
-  add(customer: CustomerT): CustomerT {
-    if (this.getById(customer.id)) {
+  findById(id: string): Promise<CustomerT | undefined> {
+    return Promise.resolve(
+      this.customers.find((customer) => customer.id === id)
+    );
+  }
+
+  async add(newCustomer: CustomerT): Promise<CustomerT> {
+    const customer = await this.findById(newCustomer.id);
+
+    if (customer) {
       throw new Error(`Existing customer ID ${customer.id}`);
     }
 
-    this.customers.push(customer);
+    this.customers.push(newCustomer);
 
-    return customer;
+    fs.writeFileSync(
+      "./fake-db/customers-db.json",
+      JSON.stringify(this.customers)
+    );
+
+    return newCustomer;
   }
 }
 
-export default new Customers();
+export default new CustomersFileRepository();
+
+interface CustomersRepository {
+  init(): Promise<void>;
+
+  fetchAll(): Promise<CustomerT[]>;
+
+  findByEmail(email: string): Promise<CustomerT | undefined>;
+
+  findById(id: string): Promise<CustomerT | undefined>;
+
+  add(customer: CustomerT): Promise<CustomerT>;
+}

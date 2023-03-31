@@ -1,16 +1,30 @@
 import bcrypt from "bcrypt";
 import express, { Express, Request, Response } from "express";
+import session from "express-session";
 import { v4 as uuid } from "uuid";
-
 import { Countries } from "./repositories/Countries";
-import Customers from "./repositories/Customers";
+import CustomersFileRepository from "./repositories/Customers";
 import { isValidishEmail } from "./validations/email";
 import { containsOnlyLatinCharacters } from "./validations/names";
 
 const app: Express = express();
-const port = 8081;
+const port = 4242;
+
+CustomersFileRepository.init();
+
+const sessionConfig = {
+    secret: "my_corgi_is_annoying",
+    saveUninitialized: true,
+};
+
+declare module "express-session" {
+    interface SessionData {
+        isAuthenticated: boolean;
+    }
+}
 
 app.use(express.json());
+app.use(session(sessionConfig));
 
 app.get("/", (req: Request, res: Response) => {
     res.header("Location", "https://http.cat/400").send(":|");
@@ -33,7 +47,7 @@ app.post("/customers", async (req: Request, res: Response) => {
     const email = req.body.email;
     if (!email) return res.status(400).json({ type: "MissingEmail" });
     if (!isValidishEmail(email)) return res.status(400).json({ type: "InvalidEmail" });
-    if (Customers.getByEmail(email)) return res.status(400).json({ type: "EmailAlreadyInUse" });
+    if (await CustomersFileRepository.findByEmail(email)) return res.status(400).json({ type: "EmailAlreadyInUse" });
 
     const countryCode = req.body.countryCode;
     if (!countryCode) return res.status(400).json({ type: "MissingCountryCode" });
@@ -50,7 +64,7 @@ app.post("/customers", async (req: Request, res: Response) => {
 
     const customerId = uuid();
 
-    const newCustomer = Customers.add({
+    const newCustomer = CustomersFileRepository.add({
         id: customerId,
         givenNames,
         lastName,
@@ -68,7 +82,7 @@ app.post("/login", async (req: Request, res: Response) => {
     const email = req.body.email;
     if (!email) return res.status(400).json({ type: "MissingEmail" })
 
-    const customer = Customers.getByEmail(email);
+    const customer = await CustomersFileRepository.findByEmail(email);
     if (!customer) return res.status(400).json({ type: "InvalidEmail" });
 
     const password = req.body.password;
@@ -77,6 +91,7 @@ app.post("/login", async (req: Request, res: Response) => {
     const correctPassword = await bcrypt.compare(password, customer.hashedPassword);
     if (!correctPassword) return res.status(400).json({ type: "IncorrectPassword" });
     else res.status(200).json(customer);
+    req.session.isAuthenticated = true;
 });
 
 app.listen(port, () => {
