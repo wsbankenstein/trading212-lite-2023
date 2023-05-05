@@ -94,6 +94,18 @@ app.post("/login", async (req: Request, res: Response) => {
     req.session.isAuthenticated = true;
 });
 
+app.get("/instruments", async (req: Request, res: Response) => {
+    // if (!req.session.isAuthenticated) return res.status(403).json({ type: "Unauthenticated" })
+    const instrumentsRes = await fetch("https://trading212-tgvlmhdopa-lm.a.run.app/instruments");
+    const instruments = await instrumentsRes.json();
+    res.status(200).json(instruments);
+});
+
+app.get("/instruments/:name", async (req: Request, res: Response) => {
+    const response = await fetch(`https://trading212-tgvlmhdopa-lm.a.run.app/instruments/${req.params.name}`);
+    res.json(await response.json());
+});
+
 app.listen(port, () => {
     console.log(`⚡️[server]: Customer Service is running at http://localhost:${port}`);
 });

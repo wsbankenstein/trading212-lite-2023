@@ -3,7 +3,7 @@ import { Button, StyleSheet, Text, TextInput, View } from "react-native"
 
 const BACKEND = "localhost:4242"
 
-export function SignupForm() {
+export function LoginForm() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
@@ -56,8 +56,12 @@ export function SignupForm() {
         onChangeText={onEmailChange}
       />
 
-      <Button title="Sign up" onPress={() => {
-          // TODO
+      <Button title="Log in" onPress={async () => {
+            const response = await fetch(`${BACKEND}/login`, 
+                                {  
+                                    method: "POST",
+                                    body: JSON.stringify({email, password})
+                                });
         }} />
     </View>
   )
